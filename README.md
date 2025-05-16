@@ -22,7 +22,7 @@ Dans le présent travail :
 
 - On utilise un Serveur SQL Azure qui va héberger toutes nos bases de données (nom du serveur : luigysql — le mien).
 - On utilise également SSMS (SQL Server Management Studio), une interface graphique qui permet de se connecter à un serveur SQL Azure (ou local), de gérer les bases de données qu’il contient, d’en créer d’autres, d’écrire et d’exécuter des requêtes SQL, de créer des procédures, des vues, etc.
-- Les processus ETL sont réalisés dans Visual Studio Community grâce au package SSIS.
+- Les processus ETL sont réalisés dans Visual Studio Community grâce à l'extension SSIS.
 
 Nous partons d’une base de données source appelée "maBaseSQL1", qui est en fait la même que la base de données "TSQL2012" disponible en ligne.
 Cette base de données contient plusieurs tables, dont : Commande, Ligne de commande, Client, Employé, Produit, Catégorie, etc.
