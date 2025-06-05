@@ -48,20 +48,20 @@ Pour remplir les bases de données "ODS" et "DWH", nous utilisons SSIS via Visua
 
 Pour cela, commençons par ouvrir Visual Studio Community puis créer un projet SSIS.
 
-############################################################ Gestionnaires de connexions ########################################################
+### Gestionnaires de connexions
 
 Une fois le projet SSIS ouvert, nous commençons par établir une chaîne de connexion entre nos différentes bases de données : "maBaseSQL1", "ODS" et "DWH".
 Pour cela, nous allons dans Gestionnaire de connexions, puis nous choisissons comme type de connexion "Microsoft OLEDB Driver for SQL Server". Ensuite, nous nous connectons l'une après l'autre à chacune des trois bases de données. Après cela, nous les intégrons les unes à la suite des autres.
 
 Maintenant, nous allons créer dans Packages SSIS nos différents packages.
 
-########################################################### Packages ODS #################################################################
-
+ ### Packages ODS 
+ 
 Nous commençons par créer le package nommé commande_ods, qui représente la construction de la table Commande qui sera chargée dans la base de données "ODS".
 Dans le même état d'esprit, nous créons les packages client_ods, produit_ods et employe_ods.
 Ensuite, pour chaque package, nous créerons une tâche de flux de données qui servira à faire l’échange des données entre la table source et la table de destination.
 
-########################################################## Tâche de flux de données ODS #######################################################
+### Tâche de flux de données ODS 
 
 - Nous commençons par créer une tâche de flux de données pour le package commande_ods.
 
@@ -94,7 +94,7 @@ Maintenant, on va créer les packages des autres tables pour la même base de do
 
 Après avoir fini cela, on passe maintenant à la création des packages pour la base de données "Data Warehouse" (DWH).
 
-############################################### Packages, Tâche de flux de données, dimension à variable lente, recherche - DWH #######################################
+### Packages, Tâche de flux de données, dimension à variable lente, recherche - DWH
 
 Cette sous-section ne sera pas du tout détaillée, elle est très longue. Nous y disons simplement ce que nous y avons fait.
 Nous avons créé les tables de dimension relatives à la base de données DWH.
